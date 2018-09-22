@@ -1,0 +1,34 @@
+Altariqh Dwiatmadja
+1606874495
+
+Project Viral
+
+1.	a. Tidak
+	b. Terjadi Whitelable Error Page, karena URL path nya diganti menjadi "/viral2jari"
+	c. untuk menentukan URL path
+
+2. 	a. Tidak
+	b. Terjadi perubahan nama method menjadi viral() namun implementasinya sama dengan index()
+
+3.	a. Tidak
+	b. Terjadi error dengan error code 500 yaitu internal server error. hal ini terjadi karena return memanggil template html yang tidak pernah ada yaitu viral2jari.html
+	c. Memanggil template viral.html
+
+Request Parameter
+
+1.	"In My Feeling" selalu terganti oleh isi dari th:text yang 		merupakan format thmeleaf
+
+2. 	Terjadi error dengan error code 400 yaitu bad request. error terjadi karena user melakukan request dengan url /challenge yang tidak ada routing untuk menghandle url tersebut
+
+3.	akses localhost:8080/challenge
+		a. terjadi error dengan error code 400 yaitu bad request. Terjadi karena method yang dipanggil melalui akses /challenge membutuhkan String parameter 'name', padahal parameter itu tidak ada
+		b. halaman akan terlihat seperti keadaan awal, namun parameter String name tidak diisi secara otomatis akan terganti dengan null
+		c. sama dengan poin b. halaman akan terlihat seperti keadaan awal. perbedaannya adalah parameter String name yang tidak diisi akan diganti dengan default value seperti yang diatur oleh PageController.java
+
+Path Variable
+
+1.	terjadi error dengan error code 400 yaitu bad request. terjadi karena method challenge membutuhkan String parameter "name" tapi user tidak mengisi String tersebut
+
+2.	terjadi error dengan error code 500 yaitu internal server error. terjadi karena kebingungan untuk memilih method handler untul url /challenge (antara method challenge atau challengePath)
+
+3. muncul halaman seperti awal dengan parameter name berisi kiki sesuai dengan url yang diakses user
